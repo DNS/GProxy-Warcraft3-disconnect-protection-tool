@@ -1146,7 +1146,6 @@ void CGProxy :: ProcessRemotePackets( )
 					m_ReconnectKey = UTIL_ByteArrayToUInt32( Data, false, 7 );
 					m_NumEmptyActions = Data[11];
 					//SendLocalChat( "GProxy++ disconnect protection is ready (" + UTIL_ToString( ( m_NumEmptyActions + 1 ) * 60 ) + " second buffer)." );
-					SendLocalChat("GProxy++ protection is ready (" + UTIL_ToString((m_NumEmptyActions + 1) * 60) + " second buffer).");
 					CONSOLE_Print( "[GPROXY] handshake complete, disconnect protection ready (" + UTIL_ToString( ( m_NumEmptyActions + 1 ) * 60 ) + " second buffer)" );
 				}
 				else if( Packet->GetID( ) == CGPSProtocol :: GPS_RECONNECT && Data.size( ) == 8 )
