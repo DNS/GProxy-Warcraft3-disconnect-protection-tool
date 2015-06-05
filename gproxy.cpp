@@ -1127,10 +1127,10 @@ void CGProxy :: ProcessRemotePackets( )
 
 			if( Packet->GetID( ) == CGameProtocol :: W3GS_SLOTINFOJOIN )
 			{
-				if( m_GameIsReliable )
+				/*if( m_GameIsReliable )
 					SendLocalChat( "This is a reliable game. Requesting GProxy++ disconnect protection from server..." );
 				else
-					SendLocalChat( "This is an unreliable game. GProxy++ disconnect protection is disabled." );
+					SendLocalChat( "This is an unreliable game. GProxy++ disconnect protection is disabled." );*/
 			}
 		}
 		else if( Packet->GetPacketType( ) == GPS_HEADER_CONSTANT )
